@@ -1,0 +1,71 @@
+
+.content-1{
+  height: 60%;
+  z-index: 0;
+}
+
+.loginTitle{
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.select{
+  z-index: 1;
+  font-size: medium;
+  color: red;
+  width: 50%;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 5rpx solid red;
+}
+
+.default{
+  z-index: 1;
+  width: 50%;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+}
+
+.hr{
+  border: 1px solid #cccccc;
+  opacity: 0.2;
+}
+
+.echart{
+  z-index: 1;
+  background: rgb(108, 247, 247);
+  border-radius: 25rpx;
+  padding: 20rpx 0;
+  height: 500rpx;
+}
+.canvas {
+  z-index: 1;
+  margin: 0 auto;
+   height: 650rpx;
+}
+
+.content-2{ 
+  width: 100%;
+  margin-top: 10rpx;
+}
+
+.item1{
+  font-size: 10px;
+  width: 120rpx;
+  height: 120rpx;
+  display: flex;
+  flex-direction: column;
+  /* align-items: stretch; */
+  position: relative;
+  align-items: center;
+  color: green;
+}
+
+.icon{
+  width: 60rpx;
+  height: 60rpx;
+}

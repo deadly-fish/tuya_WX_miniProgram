@@ -1,0 +1,117 @@
+<!--miniprogram/pages/home_center/common_panel/index.js.wxml-->
+<wxs src="./index.wxs" module="utils" />
+
+<!-- title -->
+<navbar device_name="{{device_name}}" bind:jumpTodeviceEditPage="jumpTodeviceEditPage" />
+
+<!-- 上方logo -->
+<view>
+  <image class="common-panel-backgroud" src="{{forest}}" />
+  <image style="position: relative; left: 207rpx; top: -216rpx"  class="dcImage" src="{{logo}}" />
+  <text class="dcLabel" wx:if="{{kg_flag}}" style="position: relative; left: 0rpx; top: -148rpx">插座开启</text>
+  <text class="dcLabel" wx:else style="position: relative; left: 0rpx; top: -148rpx">插座关闭</text>
+</view>
+
+<!-- 下方列表式导航 -->
+<view class="content">
+
+  <view class="xian"></view>
+  <view class="hr"></view>
+  <view class="item">
+    <view class="order">开关</view>
+    <switch class="detail" checked="{{kg_flag}}" bindchange="switch_change"></switch>
+  </view>
+
+  <view class="xian"></view>
+  <view class="hr"></view>
+  <view class="item" bindtap="timing">
+    <view class="order">定时</view>
+    <view class="detail">
+      <text>></text>
+    </view>
+  </view>
+
+  <view class="xian"></view>
+  <view class="hr"></view>
+  <view class="item" bindtap="countdown">
+    <view class="order">倒计时</view>
+    <view class="detail">
+      <text>></text>
+    </view>
+  </view>
+
+  <view class="xian"></view>
+  <view class="hr"></view>
+  <view class="item" bindtap="electricity_statistics">
+    <view class="order">电量统计</view>
+    <view class="detail">
+      <text>></text>
+    </view>
+  </view>
+
+  <view class="xian"></view>
+  <view class="hr"></view>
+  <!-- 绑定在item可以按整个框生效，不让放在order只能点击诗词生效 -->
+  <view class="item" bindtap="poetry">  
+    <view class="order">诗词</view>
+    <view class="detail">
+      <text>></text>
+    </view>
+  </view>
+
+</view>
+
+
+<!-- <view class="common-panel-header">
+  <view class="common-panel-header-block">
+    <view class="common-panel-header-dpName">{{titleItem.name}}</view>
+    <view class="common-panel-header-dpValue">{{titleItem.value}}</view>
+  </view>
+</view>
+
+<block wx:if="{{isRoDpListShow}}">
+  <view class="statuslist">
+    <block wx:for="{{roDpList}}" wx:key="{{item.code}}" wx:for-item="item" wx:for-index='idx'>
+      <view class="{{utils.countDpItem(roDpListLength,idx)}}">
+        <view class="roDpItem-dpName">{{item.code}}</view>
+        <view class="roDpItem-status">{{item.value}}</view>
+      </view>
+    </block>
+  </view>
+</block>
+
+<view class="scroll-view">
+  <block wx:if="{{isRwDpListShow}}">
+    <block wx:for="{{rwDpList}}" wx:key="{{item.code}}" wx:for-item="item">
+      <block wx:if="{{item.type === 'Boolean'}}">
+        <Boolean model:isChecked="{{item.value}}" dpCode="{{item.code}}" dpName="{{item.name}}" bind:sendDp="sendDp" />
+      </block>
+      <block wx:if="{{item.type === 'Integer'}}">
+        <Integer model:value="{{item.value}}" values="{{item.values}}" dpCode="{{item.code}}" dpName="{{item.name}}"
+          bind:sendDp="sendDp" />
+      </block>
+      <block wx:if="{{item.type === 'Enum'}}">
+        <Enum model:value="{{item.value}}" values="{{item.values}}" dpCode="{{item.code}}" dpName="{{item.name}}"
+          bind:sendDp="sendDp" />
+      </block>
+    </block>
+  </block>
+</view> -->
+
+<!-- 个人代码 -->
+<!-- <view>
+  <button size="mini" type="primary" hover-class="none">mini primary hover-class="none"</button>
+  <button type="warn">warning</button>
+  <view class="device-connect-item" data-baseUrl="{{baseUrl}}" bindtap="gotoPluginpage">一键配网！</view>red
+  <progress percent="60" stroke-width="30" show-info="active" backgroundColor="black" activeColor="blue"></progress>
+  <block wx:for="{{[20.30,50,70]}}">
+    <icon type="success" size="{{item}}"></icon>
+  </block>
+</view>
+
+<view class="time_section">
+  <view class="section_title">时间选择器</view>
+  <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+    <view class="picker">当前选择：{{time}}</view>
+  </picker>
+</view> -->

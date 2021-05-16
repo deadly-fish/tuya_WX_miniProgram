@@ -1,0 +1,44 @@
+<!-- swiper页面切换 .wxml -->
+<view class="content-1">
+
+  <!-- 展示栏 -->
+  <view class="hr"></view>
+  <swiper current="{{currentTab}}" style="height:300px">
+    <swiper-item>
+      <view class='echart'>
+        <canvas canvas-id="lineCanvas-1" disable-scroll="true" class="canvas"></canvas>
+      </view>
+    </swiper-item>
+
+    <swiper-item>
+      <view class='echart'>
+        <canvas canvas-id="lineCanvas-2" disable-scroll="true" class="canvas"></canvas>
+      </view>
+    </swiper-item>
+  </swiper>
+
+  <!-- 切换栏 -->
+  <view class="loginTitle" style="margin-top:5rpx">
+    <view class="{{currentTab==0?'select':'default'}}" data-current="0" bindtap="switchNav">电量日统计</view>
+    <view class="{{currentTab==1?'select':'default'}}" data-current="1" bindtap="switchNav">电量时统计</view>
+  </view>
+</view>
+
+<!-- 下方提示框 -->
+<view class="content-2">
+  <view class="item1" style="position: relative; left: 50rpx; top: 59rpx">
+    <image class="icon" src="{{imglist[0]}}"></image>电流（mA）{{cur_current}}
+  </view>
+  <view class="item1" style="position: relative; left: 300rpx; top: -61rpx">
+    <image class="icon" src="{{imglist[2]}}"></image>功率（W）{{cur_power}}
+  </view>
+  <view class="item1" style="position: relative; left: 580rpx; top: -181rpx">
+    <image class="icon" src="{{imglist[1]}}"></image>电压（V）{{cur_voltage}}
+  </view>
+  <view class="item1" style="position: relative; left: 140rpx; top: -136rpx">
+    <image class="icon" src="{{imglist[4]}}"></image>总消耗（KWh）{{total_all}}
+  </view>
+  <view class="item1" style="position: relative; left: 490rpx; top: -256rpx">
+    <image class="icon" src="{{imglist[3]}}"></image>本月消耗（KWh）{{total_month}}
+  </view>
+</view>

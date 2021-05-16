@@ -1,0 +1,13 @@
+<!--pages/home_center/countdown/countdown.wxml-->
+<view class="content">
+  <view style="display:flex;flex-direction:row;margin-top:10px">
+    <view style="font-weight:blod;">倒计时:</view>
+    <view>
+      <input type="text" placeholder="(合法格式：00:00:00)" style="border:1px solid #cccccc"
+        bindconfirm="count_operation"></input>
+      1、最长倒计时为24小时，即24:00:00
+      2、冒号使用英文字符
+    </view>
+  </view>
+  <view><image class="background" src="../../../image/poerty/huangzi.jpg" style="width: 750rpx; height: 1000rpx; display: inline-block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"></image></view>
+</view>

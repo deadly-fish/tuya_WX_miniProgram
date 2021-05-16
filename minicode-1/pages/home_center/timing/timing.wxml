@@ -1,0 +1,24 @@
+<!--pages/home_center/timing/timing.wxml-->
+
+<view class="section">
+  <view class="section_title">时间选择器</view>
+  <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+    <view class="picker">当前选择：{{time}}</view>
+  </picker>
+</view>
+
+<view class="section">
+  <view class="section_title">星期选择器</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">当前选择：{{array[index]}}</view>
+  </picker>
+</view>
+
+<image style="margin-top:10rpx ;width: 750rpx; higth:807rpx" src="../../../image/poerty/huoying.jpg"></image>
+
+<button class="but" bindtap="open_timing"
+  style="position: relative; left: 0rpx; top: 43rpx;margin-top:10rpx">点击添加定时任务</button>
+<button class="but" bindtap="inquire_timing"
+  style="position: relative; left: 0rpx; top: 43rpx;margin-top:10rpx">点击查看定时任务</button>
+<button class="but" bindtap="clear_timing"
+  style="position: relative; left: 0rpx; top: 43rpx;margin-top:10rpx">一键清空定时任务</button>

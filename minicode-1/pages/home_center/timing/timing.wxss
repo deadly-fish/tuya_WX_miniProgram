@@ -1,0 +1,13 @@
+/* pages/home_center/timing/timing.wxss */
+.section_title{
+  text-align: center;
+}
+
+.picker{
+  text-align: center;
+}
+
+.but{
+  display: flex;
+  position: center;
+}

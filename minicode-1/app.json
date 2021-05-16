@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/guide/index",
+    "pages/home_center/device_list/index",
+    "pages/home_center/common_panel/index",
+    "pages/home_center/device_manage/index",
+    "pages/cloud_check/index",
+    "pages/function_center/device_connect/index",
+    "pages/web_view/index",
+    "pages/base_function/index",
+    "pages/home_center/poetry/poetry",
+    "pages/home_center/timing/timing",
+    "pages/home_center/countdown/countdown",
+    "pages/home_center/electricity_statistics/electricity_statistics"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "plugins": {
+    "tuya-ap-plugin": {
+      "version": "3.3.18",
+      "provider": "wxd2aa51ffacc3ff86"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}
